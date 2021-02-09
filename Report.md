@@ -17,7 +17,7 @@ Each episode continues until `max_t` time-steps is reached or until the environm
 
 As above, a reward of +0.1 is provided for each step that the agent's hand is in the goal location.
 
-The DDPG agent is contained in [`ddpg_agent.py`](https://github.com/bansalayush25/RL_Continuous_Control/blob/master/ddpg_agent.py)
+The DDPG agent is contained in [`ddpg_agent.py`](https://github.com/bansalayush25/RL_Continuous_Control/blob/main/ddpg_agent.py)
 
 For each time step and agent the Agent acts upon the state utilising a shared (at class level) `replay_buffer`, `actor_local`, `actor_target`, `actor_optimizer`, `critic_local`, `criticl_target` and `critic_optimizer` networks.
 
@@ -51,14 +51,14 @@ Succesful training was also achieved with `N_LEARN_UPDATES = 8` in a shorter num
 
 ### Neural Networks
 
-Actor and Critic network models were defined in [`ddpg_model.py`](https://github.com/bansalayush25/RL_Continuous_Control/blob/master/ddpg_model.py).
+Actor and Critic network models were defined in [`ddpg_model.py`](https://github.com/bansalayush25/RL_Continuous_Control/blob/main/ddpg_model.py).
 
 The Actor networks utilised two fully connected layers with 256 and 128 units with relu activation and tanh activation for the action space. The network has an initial dimension the same as the state size.
 
 The Critic networks utilised two fully connected layers with 256 and 128 units with leaky_relu activation. The critic network has  an initial dimension the size of the state size plus action size.
 
 ## Plot of rewards
-![Reward Plot](https://github.com/bansalayush25/RL_Continuous_Controll/blob/master/output/result.png?raw=true)
+![Reward Plot](https://github.com/bansalayush25/RL_Continuous_Control/blob/main/output/result.png?raw=true)
 
 ```
 Episode 174	Score: 29.67	Average Score: 29.68
